@@ -8,11 +8,12 @@
     "dev": "NODE_ENV=development npm-run-all build server",
     "jest": "jest",
     "prod": "NODE_ENV=production npm-run-all build server",
-    "server": "node ./dist-server/index",
+    "server": "nodemon --exec babel-node server/index.js",
     "start": "npm run prod",
     "transpile": "babel ./server --out-dir dist-server"
   },
   "dependencies": {
+    "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
     "apollo-server": "^2.17.0",
     "cookie-parser": "~1.4.4",
