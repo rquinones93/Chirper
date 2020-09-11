@@ -25,7 +25,9 @@ const typeDefs = gql`
   type Query {
     books: [Book]
     chirps: [Chirp]
+    chirp(user_id: Int!): [Chirp]
     users: [User]
+    user(id: Int!): User
   }
 
   type Mutation {

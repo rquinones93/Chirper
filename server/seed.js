@@ -26,6 +26,31 @@ const chirps = [
     content: 'Seattle Ice Cream politics have claimed another life',
     user_id: 3,
   },
+  {
+    id: 1,
+    content: '1pass recruiters suck big nuts',
+    user_id: 1,
+  },
+  {
+    id: 1,
+    content: 'Twitter but we call it chirps',
+    user_id: 1,
+  },
+  {
+    id: 1,
+    content: 'Twitter but we call it chiapas',
+    user_id: 1,
+  },
+  {
+    id: 1,
+    content: 'Twitter but we call it chia pets',
+    user_id: 1,
+  },
+  {
+    id: 1,
+    content: 'Chirp but we call it twitter',
+    user_id: 1,
+  },
 ];
 
 const users = [
