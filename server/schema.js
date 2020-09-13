@@ -2,7 +2,7 @@ const { gql } = require('apollo-server');
 
 const typeDefs = gql`
   type User {
-    id: Int!
+    id: ID!
     bio: String
     password: String
     pinnedChirp: Int
@@ -12,7 +12,7 @@ const typeDefs = gql`
   }
 
   type Chirp {
-    id: Int!
+    id: ID!
     content: String!
     user_id: Int!
   }
@@ -25,9 +25,9 @@ const typeDefs = gql`
   type Query {
     books: [Book]
     chirps: [Chirp]
-    chirp(user_id: Int!): [Chirp]
+    chirp(user_id: ID!): [Chirp]
     users: [User]
-    user(id: Int!): User
+    user(id: ID!): User
   }
 
   type Mutation {
