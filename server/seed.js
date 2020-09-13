@@ -1,14 +1,3 @@
-const books = [
-  {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling',
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
-  },
-];
-
 const chirps = [
   {
     id: 1,
@@ -58,21 +47,26 @@ const users = [
     id: 1,
     username: 'HarryPuber',
     bio: 'Just a boy whose only weakness is bullets',
+    password: '12345',
+    privacyStatus: 0,
   },
   {
     id: 2,
     username: 'Voldewart',
     bio: 'Just a bullet whose only weakness is ecological decline',
+    password: '12345',
+    privacyStatus: 0,
   },
   {
     id: 3,
     username: 'roobercuber',
     bio: 'former barista boy',
+    password: '12345',
+    privacyStatus: 0,
   },
 ];
 
 export default {
-  books,
   chirps,
   users,
 };

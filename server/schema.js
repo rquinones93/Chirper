@@ -4,6 +4,7 @@ const typeDefs = gql`
   type User {
     id: ID!
     bio: String
+    created_at: DateTime!
     password: String
     pinnedChirp: Int
     privacyStatus: Int
@@ -14,12 +15,8 @@ const typeDefs = gql`
   type Chirp {
     id: ID!
     content: String!
+    created_at: DateTime!
     user_id: Int!
-  }
-
-  type Book {
-    title: String
-    author: String
   }
 
   type Query {
