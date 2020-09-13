@@ -1,6 +1,7 @@
 # Looking at other wack social Platforms
 ## Twitter
 
+(Screenshots taken from PC)
 <img src="./img/noted.png">
 
 ### **Observation**
@@ -12,6 +13,7 @@
 - (1) When clicking on a Tweet it replaces the timeline from the middle pane
 
 ## Instagram
+(Screenshots taken from PC)
 <img src="./img/instagram_landing_noted.png">
 
 ### **Observation**
@@ -22,3 +24,7 @@
 ### **Observation**
 - When clicking on a post it is clicked into four parts
   - Main poster, Comments, Text input for user to comment, and the actual post itself
+
+
+## KEY OBSERVATIONS
+Exploring and Discovering is integral to the social media experience, so platforms make the explore page very accessible.
