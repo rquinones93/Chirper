@@ -11,10 +11,15 @@ type User {
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
   username: String! @unique
-  chirps: [Chirp!]!
-  pinnedChirp: Int
+  chirps: [Chirp]
+  pinnedChirp: Int @default(value: 0)
   password: String
   profilePicture: String
   bio: String
-  privacyStatus: Int
+  privacyStatus: PrivacyStatus @default(value: PUBLIC)
+}
+
+enum PrivacyStatus {
+  PRIVATE
+  PUBLIC
 }

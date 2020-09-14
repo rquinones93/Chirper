@@ -1,9 +1,7 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+const { prisma } = require('../generated/prisma-client');
 
 async function main() {
-  const newUser = await prisma.user.create({
+  const newUser = await prisma.createUser({
     data: {
       created_at: new Date(),
       bio: 'This is a bio',
