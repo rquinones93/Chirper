@@ -1,11 +1,12 @@
 import { ApolloServer } from 'apollo-server';
-import prisma from 'prisma';
+import { PrismaClient } from '@prisma/client';
 
 import typeDefs from './schema';
 import resolvers from './resolvers';
 
-// import Mutations from './resolvers';
-const server = new ApolloServer({ typeDefs, resolvers });
+//www.howtographql.com/graphql-js/5-connecting-server-and-database/
+const prisma = new PrismaClient();
+const server = new ApolloServer({ typeDefs, resolvers, context: { prisma } });
 
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
