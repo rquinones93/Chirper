@@ -16,12 +16,13 @@ const typeDefs = gql`
     id: ID!
     content: String!
     created_at: String
-    user_id: Int!
+    updated_at: String
+    owner: Int!
   }
 
   type Query {
     chirps: [Chirp]
-    chirp(user_id: ID!): [Chirp]
+    chirp(owner: ID!): [Chirp]
     users: [User]
     user(id: ID!): User
   }
