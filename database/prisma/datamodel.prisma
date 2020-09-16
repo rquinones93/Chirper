@@ -8,15 +8,15 @@ type Chirp {
 
 type User {
   id: ID! @id
+  bio: String
+  chirps: [Chirp]
   createdAt: DateTime! @createdAt
+  password: String
+  pinnedChirp: Int
+  privacyStatus: PrivacyStatus
+  profilePicture: String
   updatedAt: DateTime! @updatedAt
   username: String! @unique
-  chirps: [Chirp]
-  pinnedChirp: Int @default(value: 0)
-  password: String
-  profilePicture: String
-  bio: String
-  privacyStatus: PrivacyStatus @default(value: PUBLIC)
 }
 
 enum PrivacyStatus {

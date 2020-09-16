@@ -1,15 +1,18 @@
 const resolvers = {
   Query: {
-    // books: () => seed.books,
-    // users: () => seed.users,
-    // chirps: () => seed.chirps,
-    users: async (parent, args, context) => {
+    chirpsByUser(parent, args, context) {
+      return context.prisma.link.chirps({ id: args.userId });
+    },
+    users(parent, args, context) {
       return context.prisma.link.findMany();
+    },
+    userById(parent, args, context) {
+      return contextprisma.users({ id: args.userId });
     },
   },
   Mutation: {
     createUser: (parent, args, context, info) => {
-      const newUser = context.prisma.link.create({
+      return prisma.createUser({
         data: {
           bio: args.bio,
           created_at: new Date(),
@@ -20,8 +23,8 @@ const resolvers = {
           username: args.username,
         },
       });
-      return newUser;
     },
   },
 };
-export default resolvers;
+
+module.exports = resolvers;
