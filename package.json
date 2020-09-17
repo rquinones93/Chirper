@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "build": "npm-run-all clean transpile",
-    "clean": "rimraf dist-server",
+    "clean": "rimraf dist-prisma",
     "dev": "NODE_ENV=development npm-run-all build server",
     "jest": "jest",
     "prod": "NODE_ENV=production npm-run-all build server",
     "server": "nodemon --exec babel-node database/prisma/src/index.js",
     "start": "npm run prod",
-    "transpile": "babel ./server --out-dir dist-server"
+    "transpile": "babel ./database/prisma --out-dir dist-prisma"
   },
   "dependencies": {
     "@babel/node": "^7.10.5",
