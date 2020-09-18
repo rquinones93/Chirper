@@ -17,13 +17,21 @@ async function main() {
   //     bio: 'synth guy and doggy daddy ',
   //   });
 
-  //   console.log(newUser, newUser1);
+  //   const newUser3 = await prisma.createUser({
+  //     username: 'omara',
+  //     bio: 'Amazon incoming',
+  //   });
 
-  const newChirp = await prisma.createChirp({
-    content: 'Akemies Taiko is a wild six-operator percussion module',
-    // owner: 1,
-  });
-  console.log(newChirp);
+  //   const newUser4 = await prisma.createUser({
+  //     username: 'Jesus',
+  //     bio: 'Oklahoma man',
+  //   });
+
+  // const newChirp = await prisma.createChirp({
+  //   content: 'Akemies Taiko is a wild six-operator percussion module',
+  //   owner: 1,
+  // });
+  // console.log(newChirp);
 }
 
 main()
