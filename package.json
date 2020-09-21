@@ -8,9 +8,9 @@
     "dev": "NODE_ENV=development npm-run-all build server",
     "jest": "jest",
     "prod": "NODE_ENV=production npm-run-all build server",
-    "server": "nodemon --exec babel-node database/prisma/src/index.js",
+    "server": "nodemon --exec babel-node server/prisma/src/index.js",
     "start": "npm run prod",
-    "transpile": "babel ./database/prisma --out-dir dist-prisma"
+    "transpile": "babel ./server/prisma --out-dir dist-prisma"
   },
   "dependencies": {
     "@babel/node": "^7.10.5",
