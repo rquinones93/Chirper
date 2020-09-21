@@ -1,0 +1,25 @@
+type Chirp {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  content: String!
+  owner: User! @relation(link: INLINE)
+}
+
+type User {
+  id: ID! @id
+  bio: String
+  chirps: [Chirp]
+  createdAt: DateTime! @createdAt
+  password: String
+  pinnedChirp: Int
+  privacyStatus: PrivacyStatus
+  profilePicture: String
+  updatedAt: DateTime! @updatedAt
+  username: String! @unique
+}
+
+enum PrivacyStatus {
+  PRIVATE
+  PUBLIC
+}

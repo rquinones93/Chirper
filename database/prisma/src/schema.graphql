@@ -1,0 +1,34 @@
+scalar DateTime
+
+type Chirp {
+  id: ID!
+  content: String!
+  createdAt: DateTime
+  updatedAt: DateTime
+  owner: User!
+}
+
+type User {
+  id: ID!
+  bio: String
+  chirps: [Chirp]
+  createdAt: DateTime
+  password: String
+  pinnedChirp: Int
+  privacyStatus: Int
+  profilePicture: String
+  updatedAt: DateTime
+  username: String!
+}
+
+type Query {
+  chirpsByUser(userId: ID!): [Chirp]
+  users: [User]
+  userById(userById: ID): User
+}
+
+type Mutation {
+  createUser(username: String!, bio: String): User
+  # createTask(title: String!, projectId: ID!): Task
+  # markTaskAsCompleted(taskId: ID!): Task
+}

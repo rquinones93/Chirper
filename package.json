@@ -1,0 +1,56 @@
+{
+  "name": "chirper",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm-run-all clean transpile",
+    "clean": "rimraf dist-prisma",
+    "dev": "NODE_ENV=development npm-run-all build server",
+    "jest": "jest",
+    "prod": "NODE_ENV=production npm-run-all build server",
+    "server": "nodemon --exec babel-node database/prisma/src/index.js",
+    "start": "npm run prod",
+    "transpile": "babel ./database/prisma --out-dir dist-prisma"
+  },
+  "dependencies": {
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@prisma/client": "^2.6.2",
+    "apollo-server": "^2.17.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "graphql": "^15.3.0",
+    "morgan": "^1.10.0",
+    "npm-run-all": "^4.1.5",
+    "prisma": "^1.34.10",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@prisma/cli": "^2.6.2",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^26.4.2"
+  },
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "watch": [
+      "server/*",
+      "public/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

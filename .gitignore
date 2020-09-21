@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Babel build files
+dist-server
+
+# Visual Studio Code config
+.vscode
