@@ -31,4 +31,3 @@ docker-compose up -d
 # Optional: Seed the DB Container
 node database/prisma/src/seed.js
 ```
-
